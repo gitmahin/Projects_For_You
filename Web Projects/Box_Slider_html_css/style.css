@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+.sbox {
+    width: 55px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: inset 0px -50px 15px rgba(0, 0, 0, 0.658), 0px 0px 4px white;;
+    cursor: pointer;
+
+}
+
+.box1 {
+    background-image: url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703116800&semt=sph);
+}
+
+.box2 {
+    background-image: url(https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg);
+}
+
+.box3 {
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);
+}
+
+.box4 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScuPI2IcxRFjm3cNLcjS3kzeaXeSL8PWifzdQgPUQ3KwzQ6Lz2tzoWpYhm9c7GaQP84Ss&usqp=CAU);
+}
+
+.meta {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+
+}
+
+
+.numbox {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.74);
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    margin-right: 20px;
+    color: rgb(201, 200, 200);
+    padding-left: 8px;
+
+}
+
+.content h1 {
+    width: 270px;
+    border: none;
+    height: 25px;
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.content p {
+    width: 270px;
+    height: 20px;
+    border: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+
+input:checked+label .sbox {
+    width: 350px;
+    transition: .7s;
+}
+
+input:checked+label .content {
+    animation: showcontani .1s linear .5s forwards;
+}
+
+@keyframes showcontani {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+
+@media screen and (max-width: 565px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sbox {
+        height: 55px;
+        width: 350px;
+
+    }
+
+    input:checked+label .sbox {
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .sbox {
+        height: 55px;
+        width: 330px;
+
+    }
+
+    input:checked+label .sbox {
+        height: 270px;
+    }
+
+    input:checked+label .sbox {
+        width: 330px;
+    }
+
+    .content {
+        margin-right: 5px;
+
+    }
+
+    .content h1 {
+        width: 255px;
+        height: 20px;
+        font-size: 18px;
+
+    }
+
+    .content p {
+        width: 255px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+
+    .sbox {
+        height: 55px;
+        width: 250px;
+
+    }
+
+    input:checked+label .sbox {
+        height: 200px;
+    }
+
+    input:checked+label .sbox {
+        width: 250px;
+    }
+
+    .content {
+        margin-right: 5px;
+
+    }
+
+    .content h1 {
+        width: 180px;
+        height: 20px;
+        font-size: 16px;
+
+    }
+
+    .content p {
+        width: 180px;
+        height: 20px;
+    }
+}
