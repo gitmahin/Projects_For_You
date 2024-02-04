@@ -382,7 +382,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 100px 0px;
+    padding: 50px 0px;
 
 }
 
@@ -391,12 +391,12 @@ body {
     max-width: 811px;
     border: none;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     background-color: var(--box-background-color);
 }
 
 .page-title {
-    padding: 20px 0px;
+    padding: 10px 0px;
     border-bottom: 1px solid black;
     margin-bottom: 10px;
 }
@@ -1081,8 +1081,6 @@ body {
 
 .widget_media_gallery {
     width: 300px !important;
-    overflow-x: scroll;
-    padding-bottom: 15px;
 
 }
 
@@ -1155,7 +1153,7 @@ body {
 }
 
 .footer-widget-area .wp-block-social-links li {
-    padding: 10px !important;
+    padding: 5px !important;
     border-radius: 50%;
 }
 
@@ -1221,13 +1219,14 @@ footer .wp-block-pages-list__item a {
     text-align: center;
 }
 
-@media screen and (max-width: 1350px){
-    .single_post_body_wrap{
+@media screen and (max-width: 1350px) {
+    .single_post_body_wrap {
         padding-top: 60px;
     }
 }
-@media screen and (max-width: 785px){
-    .loop-post-d-wrapper{
+
+@media screen and (max-width: 785px) {
+    .loop-post-d-wrapper {
         padding-top: 40px;
     }
 }
