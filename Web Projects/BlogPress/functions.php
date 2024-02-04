@@ -1,4 +1,6 @@
 <?php
+
+add_theme_support('title-tag');
 add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
 register_nav_menus(
@@ -24,7 +26,7 @@ function custom_search_result($query)
         $query->set('post_type', array('post'));
         $query->set('post_per_page', 3);
     }
-}
+};
 add_action('pre_get_posts', 'custom_search_result');
 function catin_pagination()
 {
@@ -43,6 +45,5 @@ function catin_pagination()
     ];
     printf('<nav class="catinpagination">%s</nav>', wp_kses(paginate_links($args), $allowed_tags));
 }
-;
 
 ?>

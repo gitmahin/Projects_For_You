@@ -56,6 +56,8 @@ body {
     z-index: 99999999999;
     gap: 20px;
     box-shadow: 0px 0px 4px var(--primary-shadow-color);
+    top: 0;
+    left: 0;
 
 
 }
@@ -416,7 +418,7 @@ body {
     max-width: 1347px;
     display: flex;
     justify-content: space-between;
-    padding: 100px 60px 35px 60px;
+    padding: 65px 60px 35px 60px;
     box-sizing: border-box;
 }
 
@@ -970,7 +972,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 110px;
+    padding-top: 65px;
 }
 
 .loop-post-container {
@@ -1217,4 +1219,15 @@ footer .wp-block-pages-list__item a {
 
 .widget_text p {
     text-align: center;
+}
+
+@media screen and (max-width: 1350px){
+    .single_post_body_wrap{
+        padding-top: 60px;
+    }
+}
+@media screen and (max-width: 785px){
+    .loop-post-d-wrapper{
+        padding-top: 40px;
+    }
 }

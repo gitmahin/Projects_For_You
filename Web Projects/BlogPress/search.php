@@ -41,9 +41,10 @@
                 </div>
             <?php } ?>
         <?php } else { ?>
-            <h1 style="margin-bottom: 500px;">No Results For This Search</h1>
+            <h1 style="margin-bottom: 500px;">No Results For This Search😢</h1>
         <?php }
         ?>
     </div>
+    <?php catin_pagination() ?>
 </div>
 <?php get_footer() ?>

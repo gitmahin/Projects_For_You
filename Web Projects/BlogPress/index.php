@@ -3,47 +3,48 @@
 <div class="loop-post-d-wrapper">
     <div class="loop-post-container">
         <?php
-        $wpArray = [
-            'post_type' => 'post',
-            'post_status' => 'publish',
-        ];
-        $Homequery = new Wp_Query($wpArray);
-        while ($Homequery->have_posts()) {
-            $Homequery->the_post();
-            ?>
-            <div class="ca-post-box">
-                <div class="ca-post-thumbnail">
-                    <a href="<?php the_permalink() ?>">
-                        <?php the_post_thumbnail() ?>
-                    </a>
+        if (have_posts()) { ?>
+            <?php
+            while (have_posts()) {
+                the_post();
+                ?>
+                <div class="ca-post-box">
+                    <div class="ca-post-thumbnail">
+                        <a href="<?php the_permalink() ?>">
+                            <?php the_post_thumbnail() ?>
+                        </a>
+                    </div>
+                    <div class="ca-post-content">
+                        <ul>
+                            <?php $cate = get_the_category($post->ID);
+                            foreach ($cate as $category) {
+                                ?>
+                                <li>
+                                    <?php echo $category->name; ?>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <h2>
+                            <?php the_title() ?>
+                        </h2>
+                        <p>
+                            <?php the_excerpt() ?>
+                        </p>
+                        <p class="ca-post-date">
+                            <?php echo get_the_date() ?>
+                        </p>
+                    </div>
+                    <div class="ca-post-button">
+                        <a href="<?php the_permalink() ?>"><button>
+                                Read more
+                            </button></a>
+                    </div>
                 </div>
-                <div class="ca-post-content">
-                    <ul>
-                        <?php $cate = get_the_category($post->ID);
-                        foreach ($cate as $category) {
-                            ?>
-                            <li>
-                                <?php echo $category->name; ?>
-                            </li>
-                        <?php } ?>
-                    </ul>
-                    <h2>
-                        <?php the_title() ?>
-                    </h2>
-                    <p>
-                        <?php the_excerpt() ?>
-                    </p>
-                    <p class="ca-post-date">
-                        <?php echo get_the_date() ?>
-                    </p>
-                </div>
-                <div class="ca-post-button">
-                    <a href="<?php the_permalink() ?>"><button>
-                            Read more
-                        </button></a>
-                </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
+        <?php } else { ?>
+            <h1 style="margin-bottom: 500px;">Write Your First Post😃</h1>
+        <?php }
+        ?>
     </div>
     <?php catin_pagination() ?>
 </div>

@@ -6,14 +6,9 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/main_style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>
-        <?php echo get_the_title() ?>
-    </title>
+        <?php wp_head() ?>
 </head>
-
 <body class="dark_theme">
-
-
     <header class="main_header">
         <div class="logo">
             <?php $logoimg = get_header_image() ?>
@@ -48,8 +43,6 @@
                     <input type="search" name="s" placeholder="Search" id="search" required>
                     <input type="submit" name="submit" value="Search">
                 </form>
-
             </div>
-
         </nav>
     </header>

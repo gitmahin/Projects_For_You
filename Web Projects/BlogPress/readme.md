@@ -14,7 +14,8 @@ Path: `public_html`>`wp-content`>`themes`
 ## Quick Guides:
 
 
-- Insert your website logo.
+- Insert your website **Logo** and **Favicon**.
+
 
 - Go to widget and add your social icons in Footer
 ![img](<img/Screenshot (14).png>)
