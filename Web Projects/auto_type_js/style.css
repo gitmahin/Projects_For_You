@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 35px;
+
+}
+
+span{
+    color: red;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="box">
+        <h1>I'm a <span class="type"></span></h1>
+    </div>
+    <script>
+        let type = new Typed(".type", {          
+                strings : ["Programmer", "Designer", "Developer", "c++", "java", "machine learning"],
+                typeSpeed : 30,
+                backSpeed : 30,             
+                loop: true
+        })
+    </script>
+</body>
+</html>
