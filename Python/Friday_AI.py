@@ -9,7 +9,7 @@ import time
 import pywhatkit
 import pyautogui
 from PIL import Image, ImageGrab
-# import screen_brightness_control as sbc
+import screen_brightness_control as sbc
 from pytube import YouTube
 import math
 import speedtest
@@ -46,7 +46,7 @@ def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening......")
-        r.pause_threshold = 0.9
+        # r.pause_threshold = 0.9
         # r.adjust_for_ambient_noise(source, duration=5)
         # r.energy_threshold= 1
         # r.dynamic_energy_threshold = True 
