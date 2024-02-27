@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #01030c;
+        }
+
+        .clockswrap{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        .clockbox{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #clock{
+            color: rgb(95, 95, 95);
+            font-weight: 500;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        #sClock{
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+
+        }
+        .hour{
+            font-weight: 500;
+            color: rgb(255, 102, 0);
+            font-size: 40px;
+        }
+        .minutes{
+            color: rgb(30, 154, 236);
+            font-size: 40px;
+        }
+        .seconds{
+            font-size: 15px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="clockswrap">
+        <main>
+            <div class="clockbox">
+                <h1>Date Time</h1>
+                <div id="clock">
+                    
+                </div>
+
+            </div>
+            <div id="sClock">
+                <p class="hour"></p>
+                <p>:</p>
+                <p class="minutes"></p>
+                <p class="seconds"></p>
+            </div>
+
+        </main>
+    </div>
+    <script>
+        const clock = document.getElementById('clock')
+        const body = document.querySelector('body'),
+        hour = body.querySelector('.hour'),
+        min = body.querySelector('.minutes'),
+        sec = body.querySelector('.seconds')
+
+
+        setInterval(() => {
+            const date = new Date()
+            const localDate = date.toLocaleString('en-US', {
+                hour12: false
+            })
+            clock.innerHTML = localDate
+        }, 1000);
+
+            setInterval(() => {
+                const d = new Date()
+                const h = d.getHours()
+                const m = d.getMinutes()
+                const s = d.getSeconds()
+                
+                hour.innerHTML = h
+                min.innerHTML = m
+                sec.innerHTML = s
+            }, 1000);
+    </script>
+</body>
+</html>
