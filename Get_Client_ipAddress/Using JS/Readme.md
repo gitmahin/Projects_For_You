@@ -2,7 +2,7 @@
 
 I showed you 4 methods to show client IP Address using JS.
 
-### You can run these methods on my Repl [https://replit.com/@nimahin25]. Path= `folder/Get_Client_IP_Address/Using_JS/`
+### You can run these methods on my Repl [https://replit.com/@nimahin25]
 
 Just fork my REPL and run the code 😃
 
