@@ -12,8 +12,7 @@ const api = {
                 http.get(api, (response) => {
                     response.on("data", (ip) => {
                         const ipaddress = chalk.yellow(ip)
-                        const ballul = ipaddress.toString()
-                        resolve(ballul );
+                        resolve(ipaddress);
                     });
                 }).on("error", (error) => {
                     reject(error);
@@ -25,8 +24,8 @@ const api = {
         let finalIPAddress;
         
         getIPAddress()
-            .then((ballul ) => {
-                finalIPAddress = ballul ; 
+            .then((ipaddress) => {
+                finalIPAddress = ipaddress; 
             })
             .catch((error) => {
                 console('error ip address');
