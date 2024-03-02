@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.active li{
+  background-color: rgb(146, 146, 250);
+}
+
+.header{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(181, 181, 250);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 150px;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu a li{
+  font-size: 18px;
+  font-weight: 600;
+  list-style-type: none;
+  padding: 7px 20px;
+  border-radius: 5px;
+  
+}
+
+.containerwrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0px;
+
+
+}
+
+.container .card{
+  width: 280px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(179, 179, 253);
+  cursor: pointer;
+}
+
+.container .card h3{
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #6a05ec;
+  margin-bottom: 10px;
+}
+.container .card p{
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: rgb(78, 78, 78);
+  margin-bottom: 10px;
+
+}
+
+.container .card p:nth-child(3){
+  color: rgb(180, 135, 240);
+  font-size: 13px;
+}
+
+
+.formwrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.postForm{
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.postForm .intitle, .indesc{
+  width: 800px;
+  font-size: 20px;
+  border: 1px solid rgb(142, 142, 247);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.postForm .intitle{
+  margin-bottom: 20px;
+  color:#6a05ec ;
+  font-size: 25px;
+  font-weight: 600;
+  border-width: 2px;
+}
+
+.postForm .indesc{
+  height: 600px;
+
+}
+
+#insubmit{
+  padding: 20px 70px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid rgb(142, 142, 247);
+  background-color: #6905ec2f;
+  color: #6a05ec;
+  cursor: pointer;
+}
+
+#insubmit:hover{
+  background-color: #6905ec3a;
+}
+
+#insubmit:active{
+  padding: 19px 69px;
+  font-size: 17px;
+}
+
+
+.error{
+  color: red;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.success{
+  font-weight: bolder;
+  font-size: 18px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: rgb(5, 185, 86);
+}
+
+.errorpub{
+  font-weight: bolder;
+  font-size: 18px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: red;
+}
