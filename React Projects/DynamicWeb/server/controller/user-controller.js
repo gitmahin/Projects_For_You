@@ -1,4 +1,5 @@
 import { User } from "../models/userSchema.js"
+import { Post } from "../models/postSchema.js"
 import bcrypt from 'bcryptjs'
 
 export const register = async (req, res) =>{
@@ -65,4 +66,20 @@ export const adminuser =(req, res) =>{
         res.status(400).json({error: "Error user authenticate"})
         
     }
+}
+
+
+export const deleteUser = async (req, res) =>{
+    try {
+       
+        const findUser = req.params     
+        const delUser =  findUser.email 
+        await User.deleteOne({email: delUser})
+        await Post.deleteMany({adminEmail: delUser})
+        res.status(200).json({message:"user has been deleted"})
+    } catch (error) {
+        res.status(400).json({error:"Error deleting user"})      
+    }
+
+
 }

@@ -7,50 +7,50 @@
 }
 
 
-:root{
-  --header-and-container-color: white ;
+:root {
+  --header-and-container-color: white;
   --header-menu-color: black;
-  --header-active-menu-color: #AC44FF ;
+  --header-active-menu-color: #AC44FF;
   --container-color: #F8EFFF;
   --container-box-shadow: inset 0px 0px 15px #00000049;
   --submit-btn-shadow: 0px 18px 38px #ac44ff94;
   --register-img-box-shadow: 0px 9px 29px #0000001f;
-  --footer-body-color: white ;
+  --footer-body-color: white;
   --footer-container-box-shadow: 0px 0px 10px #ab44ff5b;
-  --form-input-text-color: black ;
+  --form-input-text-color: black;
   --placeholder-color: #D0D0D0;
   --meta-info-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.171);
   --meta-info-box: white;
   --meta-info-a: black;
   --card-background-color: white;
-  --card-noimg-box-shadow: inset 0px 0px 15px #0000003d ;
-  --card-hover-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185) ;
+  --card-noimg-box-shadow: inset 0px 0px 15px #0000003d;
+  --card-hover-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
   --dash-input-color: white;
   --publish-box-shadow: 0px 18px 38px rgb(6, 209, 108);
-  --publish-active-shadow: 0px 18px 30px rgb(6, 209, 108) ;
+  --publish-active-shadow: 0px 18px 30px rgb(6, 209, 108);
 }
 
-.dark-mode{
-  --publish-active-shadow: 0px 18px 30px rgba(6, 209, 108, 0.322) ;
+.dark-mode {
+  --publish-active-shadow: 0px 18px 30px rgba(6, 209, 108, 0.322);
   --publish-box-shadow: 0px 18px 38px rgba(6, 209, 108, 0.322);
   --dash-input-color: #0c0214;
-  --card-noimg-box-shadow: inset 0px 0px 15px #ffffff31 ;
+  --card-noimg-box-shadow: inset 0px 0px 15px #ffffff31;
   --card-background-color: #040006;
   --meta-info-a: #AC44FF;
   --meta-info-box: #070707;
   --meta-info-box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.568);
   --placeholder-color: #575757;
-  --form-input-text-color: white ;
-  --header-and-container-color: #070707 ;
+  --form-input-text-color: white;
+  --header-and-container-color: #070707;
   --header-menu-color: #AC44FF;
   --header-active-menu-color: white;
   --container-color: #08010D;
   --container-box-shadow: inset 0px 0px 15px #ffffff33;
   --submit-btn-shadow: 0px 18px 38px #ab44ff41;
   --register-img-box-shadow: 0px 9px 29px #ffffff1f;
-  --footer-body-color: #070707 ;
+  --footer-body-color: #070707;
   --footer-container-box-shadow: 0px 0px 2px #ab44ff85;
-  --card-hover-shadow: 0px 0px 10px rgba(255, 255, 255, 0.185) ;
+  --card-hover-shadow: 0px 0px 10px rgba(255, 255, 255, 0.185);
 }
 
 ::-webkit-scrollbar {
@@ -120,10 +120,11 @@
 }
 
 
-#root{
+#root {
   background-color: var(--header-and-container-color);
   transition: .2s;
 }
+
 .container {
   border: none;
   border-radius: 20px;
@@ -345,15 +346,15 @@
 
 .meta-info-box {
   width: 250px;
-  height: 0px;
+  height: 210px;
   background-color: var(--meta-info-box);
   position: absolute;
   right: 0;
   top: 0;
   border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 20px;
   display: none;
   overflow: hidden;
   opacity: 0%;
@@ -370,8 +371,8 @@
 @keyframes metaboxshowani {
 
   to {
-    height: 210px;
-    
+
+
     opacity: 100%;
   }
 }
@@ -392,19 +393,13 @@
 
 .meta-info-box a {
   text-decoration: none;
-  color: var(--meta-info-a) ;
+  color: var(--meta-info-a);
   font-weight: 500;
   border-radius: 8px;
 }
 
 .meta-info-box a:hover {
   background-color: #ab44ff28;
-
-}
-
-.dash-wrap h1 {
-  color: #AC44FF;
-  margin: 20px 0px 50px 30px;
 
 }
 
@@ -504,20 +499,23 @@
   border-radius: 50px;
 
   background-color: rgb(11, 240, 125);
-  box-shadow: var(--publish-box-shadow) , inset 0px -15px 28px rgb(7, 197, 102);
+  box-shadow: var(--publish-box-shadow), inset 0px -15px 28px rgb(7, 197, 102);
   cursor: pointer;
 
 
 }
 
 #publish:active {
-  box-shadow: var(--publish-active-shadow) , inset 0px -15px 28px rgb(7, 197, 102);
+  box-shadow: var(--publish-active-shadow), inset 0px -15px 28px rgb(7, 197, 102);
   font-size: 15px;
 }
 
 #logout {
   color: red;
   font-weight: bolder;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 #logout:hover {
@@ -535,7 +533,7 @@
   font-weight: 500;
 }
 
-footer{
+footer {
   padding-top: 30px;
   padding-bottom: 15px;
   background-color: var(--footer-body-color);
@@ -552,20 +550,14 @@ footer{
 }
 
 
-.admin-post-main-wrap h1{
-  color: #AC44FF;
-  margin: 20px 0px 50px 30px;
-}
-
-
-.admin-post-wrapper{
+.admin-post-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.admin-post-container{
+.admin-post-container {
   border: none;
   max-width: 1300px;
   width: 100%;
@@ -591,18 +583,18 @@ footer{
 
 }
 
-.admin-post-container .card:hover{
-  box-shadow: var(--card-hover-shadow) ;
+.admin-post-container .card:hover {
+  box-shadow: var(--card-hover-shadow);
 }
 
-.admin-post-container .card .img{
+.admin-post-container .card .img {
   height: 206px;
   box-shadow: var(--card-noimg-box-shadow);
   transition: .2s;
 
 }
 
-.admin-post-container .card img{
+.admin-post-container .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -610,18 +602,18 @@ footer{
 
 }
 
-.maincontent{
+.maincontent {
   padding: 5px 15px;
 }
 
-.maincontent h3{
+.maincontent h3 {
   text-align: left;
   font-weight: 600;
   font-size: 22px;
   color: #AC44FF;
 }
 
-.maincontent p{
+.maincontent p {
   font-size: 16px;
   color: #717171;
   display: -webkit-box;
@@ -631,7 +623,7 @@ footer{
 
 }
 
-.button-container-admin-post{
+.button-container-admin-post {
   position: absolute;
   bottom: 7px;
   right: 10px;
@@ -640,14 +632,14 @@ footer{
   gap: 90px;
 }
 
-.button-container-admin-post p{
+.button-container-admin-post p {
   color: #717171;
   font-size: 14px;
   align-self: flex-end;
 
 }
 
-.button-container-admin-post button{
+.button-container-admin-post button {
   background-color: transparent;
   border: none;
   font-size: 17px;
@@ -658,7 +650,7 @@ footer{
 
 }
 
-.btn-hover-effect{
+.btn-hover-effect {
   background-color: #AC44FF;
   width: 125px;
   height: 40px;
@@ -668,16 +660,153 @@ footer{
   bottom: 0;
   right: -125px;
   transition: .3s;
-  
+
 }
 
-.admin-post-container .card:hover .btn-hover-effect{
+.admin-post-container .card:hover .btn-hover-effect {
   right: 0px;
 }
 
 
-.admin-post-container .card:hover .button-container-admin-post button{
+.admin-post-container .card:hover .button-container-admin-post button {
   color: white;
   transition: .3s;
 }
- 
+
+
+
+
+.about-wrapper,
+.contact-wrap,
+.home-wrap,
+.admin-post-main-wrap,
+.dash-wrap h1 {
+  color: #AC44FF;
+  margin: 20px 0px 50px 30px;
+}
+
+
+
+.about-container {
+  width: 100%;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+  border-radius: 50%;
+}
+
+.about-email {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.about-meta-info {
+  width: 80vw;
+  margin: 30px auto;
+}
+
+.about-meta-info span {
+  margin-right: 6px;
+  font-weight: 600;
+  color: #AC44FF;
+}
+
+.about-meta-info p {
+
+  display: inline-block;
+}
+
+.danger-zone {
+  width: 77vw;
+  border: 1px solid red;
+  margin: 0px auto 30px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 30px rgba(255, 0, 0, 0.267);
+}
+
+.danger-zone p {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.delete-account-btn {
+  padding: 8px 20px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.delete-account-btn:hover {
+  background-color: rgb(250, 76, 76);
+
+}
+
+.delwindow {
+  width: 30vw;
+  background-color: white;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.137);
+  z-index: 999999999999999999999999999;
+
+}
+
+.del-confirm-content {
+  text-align: center;
+}
+
+.del-confirm-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.del-confirm-content p {
+  font-size: 16px;
+  color: black;
+}
+
+.del-btn-in-del-confirm-btns {
+  padding: 8px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.cancelDel {
+  background-color: rgb(9, 219, 139);
+  color: black;
+  margin-right: 20px;
+}

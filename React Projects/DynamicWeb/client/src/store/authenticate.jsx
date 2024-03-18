@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
 
 
     return (
-        <AuthContext.Provider value={{ saveTokenToLocal, logOutUser, isLoggedin, user, post }}>
+        <AuthContext.Provider value={{ saveTokenToLocal, logOutUser, isLoggedin, user, post, token }}>
             {children}
         </AuthContext.Provider>
     )

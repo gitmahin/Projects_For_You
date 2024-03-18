@@ -10,7 +10,7 @@ const MyBlog = () => {
       <div className="admin-post-wrapper">
 <div className="admin-post-container">
       {post.map((p) =>{
-        return <div className="card">
+        return <div className="card" key={p._id}>
           <div className="img">
             <img src={p.postimg} alt="Image" />
           </div>
