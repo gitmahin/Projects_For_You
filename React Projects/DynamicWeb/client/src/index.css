@@ -224,6 +224,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #eyespan {
@@ -795,6 +796,12 @@ footer {
   color: black;
 }
 
+.del-confirm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .del-btn-in-del-confirm-btns {
   padding: 8px 20px;
   background-color: red;
@@ -809,4 +816,19 @@ footer {
   background-color: rgb(9, 219, 139);
   color: black;
   margin-right: 20px;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+#confirm-delation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 15px;
 }

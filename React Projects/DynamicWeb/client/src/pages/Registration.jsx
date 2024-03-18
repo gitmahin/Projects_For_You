@@ -55,7 +55,7 @@ const Registration = () => {
       if (fetchData.status == 201) {
         toast.success('Registered successfully')
         setTimeout(() => {
-          navigateTo('/login', {replace: true})
+          navigateTo('/login', { replace: true })
         }, 1000);
       } else if (fetchData.status == 400) {
         toast.error('User already existed')
@@ -126,7 +126,13 @@ const Registration = () => {
                 validate: (value) => value === password.current || "Password doesn't matching"
               })} />
             </div>
-            <input id='submit' type="submit" disabled={isSubmitting} value={isSubmitting ? "Loading..." : "Sign up"} />
+            <div className="submitBtn">
+              <input type="submit" id='submit' disabled={isSubmitting} value={isSubmitting ? "Loading..." : "Sign up"} />
+              <lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="loop" >
+              </lord-icon>
+            </div>
           </div>
           <div className="animation">
             <img src={animation} />

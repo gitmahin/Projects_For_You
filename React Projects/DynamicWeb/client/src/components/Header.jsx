@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useAuth } from '../store/authenticate'
 
@@ -7,12 +7,23 @@ const Header = () => {
   const { user } = useAuth()
   const meta_ref = useRef()
   const openDelWindow = useRef()
+
+  const closeLogwin = () => {
+    isLoggedin? "": openDelWindow.current.style.display = "none"
+  }
+
+  useEffect(() => {
+    closeLogwin()
+
+  }, [isLoggedin])
   
-  isLoggedin? "": openDelWindow.current.style.display = "none"
+
+
+  
 
   return (
     <>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      
       <header>
         <div className="header-wrap">
           <div className="menu">

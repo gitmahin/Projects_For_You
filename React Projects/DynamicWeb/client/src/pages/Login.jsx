@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigateTo = useNavigate()
-  const {saveTokenToLocal} = useAuth()
+  const { saveTokenToLocal } = useAuth()
   const {
     register,
     handleSubmit,
@@ -32,26 +32,26 @@ const Login = () => {
       const fetchData = await fetch('/api/user-signin', {
         method: 'POST',
         body: JSON.stringify(data),
-        headers:{
+        headers: {
           'Content-Type': 'application/json'
         }
       })
-      if(fetchData.status == 200){
+      if (fetchData.status == 200) {
         const response = await fetchData.json()
         saveTokenToLocal(response.token)
         toast.success('Loged in successfully')
-          navigateTo('/myblog', {replace: true})
-        
-      }else if(fetchData.status == 400){
+        navigateTo('/myblog', { replace: true })
+
+      } else if (fetchData.status == 400) {
         toast.error('Invalid credentials')
-      }else if(fetchData.status == 422){
+      } else if (fetchData.status == 422) {
         toast.error('Fill the required fields')
-      }else if(fetchData.status == 500){
+      } else if (fetchData.status == 500) {
         toast.error('Server Error')
       }
     } catch (error) {
-toast.error('Something went wrong')
-      
+      toast.error('Something went wrong')
+
     }
 
   }
@@ -88,12 +88,19 @@ toast.error('Something went wrong')
                 visibility_off
               </span></label>
             </div>
-            <input type="submit" id='submit' disabled={isSubmitting} value={isSubmitting ? "Loading..." : "Sign in"} />
+            <div className="submitBtn">
+              <input type="submit" id='submit' disabled={isSubmitting} value={isSubmitting ? "Loading..." : "Sign in"} />
+              <lord-icon
+    src="https://cdn.lordicon.com/whtfgdfm.json"
+    trigger="hover"
+    >
+</lord-icon>
+            </div>
           </form>
         </div>
       </div>
-          {errors.email && toast.error(errors.email.message) }
-          {errors.pass && toast.error(errors.pass.message) }
+      {errors.email && toast.error(errors.email.message)}
+      {errors.pass && toast.error(errors.pass.message)}
     </div>
   )
 }

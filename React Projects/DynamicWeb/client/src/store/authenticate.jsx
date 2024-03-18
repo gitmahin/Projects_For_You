@@ -37,7 +37,6 @@ export const AuthProvider = ({ children }) => {
                 const userAuthData = await fetchUserData.json()
                 setUser(userAuthData)
             }
-            console.log('rendering...');
             
         } catch (error) {
             console.log('userAuthData error');
