@@ -71,7 +71,8 @@ const About = () => {
                 Cancel
               </button>
 
-              <button className=" del-btn-in-del-confirm-btns" id='confirm-delation' onClick={() => deleteUser(user.email)} > <lord-icon
+              <button className="confirm-delation del-btn-in-del-confirm-btns" id='confirm-delation' onClick={() => deleteUser(user.email)} > <lord-icon
+              target=".confirm-delation"
                 src="https://cdn.lordicon.com/skkahier.json"
                 trigger="hover" style={{ width: "20px" }}>
               </lord-icon> Delete</button>

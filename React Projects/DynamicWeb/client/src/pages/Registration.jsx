@@ -129,6 +129,7 @@ const Registration = () => {
             <div className="submitBtn">
               <input type="submit" id='submit' disabled={isSubmitting} value={isSubmitting ? "Loading..." : "Sign up"} />
               <lord-icon
+                target=".submitBtn"
                 src="https://cdn.lordicon.com/hrjifpbq.json"
                 trigger="hover" >
               </lord-icon>
