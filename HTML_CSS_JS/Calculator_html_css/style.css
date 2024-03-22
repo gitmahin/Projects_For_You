@@ -89,13 +89,13 @@ input {
     outline: 5px solid rgb(109, 161, 238);
 }
 
-#graybtn {
-    background-color: rgba(128, 128, 128, 0.582);
-    font-size: 30px;
+.graybtn {
+    background-color: rgba(128, 128, 128, 0.582) !important;
+    font-size: 30px !important;
 }
 
-#graybtn:active {
-    outline: 5px solid white;
+.graybtn:active {
+    outline: 5px solid white !important;
 }
 
 #operators {
